@@ -1,3 +1,6 @@
+Here is a suggested `README.md` file for your GitHub repository:  
+
+```markdown
 # Terraform Script: AWS VPC and Web Server Deployment
 
 This Terraform script automates the creation of an AWS Virtual Private Cloud (VPC) along with associated resources for deploying a simple web server running Apache on an Ubuntu instance.
@@ -28,3 +31,44 @@ The following AWS resources will be created:
 ```bash
 git clone https://github.com/Sudhansu-12/first-terraform.git
 cd first-terraform
+```
+
+### 2. Update Variables
+Replace the following placeholders in the `provider` block of the script:
+- `access_key`: Your AWS access key.
+- `secret_key`: Your AWS secret key.
+
+Replace `main-key` in the `aws_instance` resource with your SSH key pair name.
+
+### 3. Initialize Terraform
+Run the following command to initialize Terraform:
+```bash
+terraform init
+```
+
+### 4. Plan the Infrastructure
+Check the plan to verify what will be created:
+```bash
+terraform plan
+```
+
+### 5. Apply the Changes
+Deploy the infrastructure:
+```bash
+terraform apply
+```
+Type `yes` when prompted.
+
+### 6. Access the Web Server
+After deployment, Terraform outputs the Elastic IP. Access the web server in your browser by navigating to `http://<Elastic-IP>`.
+
+### 7. Destroy the Infrastructure
+To clean up and delete all resources, run:
+```bash
+terraform destroy
+```
+Type `yes` when prompted.
+
+## Notes
+- Make sure to destroy the resources when not in use to avoid unnecessary AWS charges.
+- The AMI ID in this script is for Ubuntu in the `us-east-1` region. Update it if using a different region or OS.
