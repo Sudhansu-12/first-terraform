@@ -1,9 +1,8 @@
-Here is a suggested `README.md` file for your GitHub repository:  
-
-```markdown
 # Terraform Script: AWS VPC and Web Server Deployment
 
 This Terraform script automates the creation of an AWS Virtual Private Cloud (VPC) along with associated resources for deploying a simple web server running Apache on an Ubuntu instance.
+
+```markdown
 
 ## Prerequisites
 
